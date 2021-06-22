@@ -21,15 +21,15 @@
   * Django 2.2.10
   * djangorestframework
 
-Склонируйте репозиторий с помощью git
+* Склонируйте репозиторий с помощью git
 
     git clone https://github.com/josephRTi/Votings.git
     
-Перейти в папку:
+* Перейдите в папку:
 ```bash
 cd Votings
 ```
-Настраиваем virtualenv и пакеты в нем:
+* Настраиваем virtualenv и пакеты в нем:
 ```bash
 cd innova_comments_app
 python3 -m venv venv
@@ -38,7 +38,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-* Мограции
+* Миграции
 ```bash
 python manage.py makemigrations
 python manage.py migrate
