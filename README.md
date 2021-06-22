@@ -25,13 +25,9 @@
 
     git clone https://github.com/josephRTi/Votings.git
     
-* Перейдите в папку:
-```bash
-cd Votings
-```
 * Настраиваем virtualenv и пакеты в нем:
 ```bash
-cd innova_comments_app
+cd Votings
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
