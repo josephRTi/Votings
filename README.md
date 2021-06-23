@@ -20,9 +20,9 @@
   * djangorestframework
 
 * Склонируйте репозиторий с помощью git
-
-    git clone https://github.com/josephRTi/Votings.git
-    
+```bash
+git clone https://github.com/josephRTi/Votings.git
+```
 * Настраиваем virtualenv и пакеты в нем:
 ```bash
 cd Votings
