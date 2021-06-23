@@ -129,7 +129,7 @@ python manage.py runserver
 
 ### Создание факта голосования
 * Request method: POST
-* URL: http://localhost:8000/api/questions/create/
+* URL: http://localhost:8000/api/votefacts/create/
 * Body: 
     * (fk) author:
     * (fk) survey:
@@ -139,7 +139,7 @@ python manage.py runserver
 
 ### Редактирование факта голосования
 * Request method: POST
-* URL: http://localhost:8000/api/questions/update/<int:pk>
+* URL: http://localhost:8000/api/votefacts/update/<int:pk>
 * Body: 
     * (fk) author:
     * (fk) survey:
@@ -149,5 +149,9 @@ python manage.py runserver
 
 ### Удаление факта голосования
 * Request method: POST
-* URL: http://localhost:8000/api/questions/delete/<int:pk>
+* URL: http://localhost:8000/api/votefacts/delete/<int:pk>
 
+### Получение ответов некоторого пользователя
+* Request method: GET
+* URL: http://localhost:8000/api/votefacts/getAll
+* params: user_id=<int:pk>
