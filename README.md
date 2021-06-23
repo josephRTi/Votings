@@ -1,8 +1,6 @@
 # API for Votings
 Задача: спроектировать и разработать API для системы опросов пользователей
 
-### _Документация_ (автодокументирование на swagger по адресу http://127.0.0.1:8000/swagger/ )
-
 ## Описание ТЗ:
 
 ##### _Функционал для администратора системы:_
@@ -48,4 +46,108 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 * Приложение будет доступно по адресу: http://127.0.0.1:8000/
+
+(автодокументирование на swagger по адресу http://127.0.0.1:8000/swagger/ )
+
+### Документация
+### Получение токена пользователя
+* Request method: POST
+* URL: http://localhost:8000/api/auth/token
+* Body: 
+    * username: 
+    * password: 
+
+### Регистрация пользователя
+* Request method: POST
+* URL: http://localhost:8000/api/auth/
+* Body: 
+    * username: 
+    * password: 
+    * (optional) email: 
+
+### Создание опроса
+* Request method: POST
+* URL: http://localhost:8000/api/surveys/create/
+* Body: 
+    * survey_name: 
+    * pub_date: 
+    * end_date:
+    * survey_description:
+    * is_active:
+
+### Редактирование опроса
+* Request method: POST
+* URL: http://localhost:8000/api/surveys/update/<int:pk>
+* Body: 
+    * survey_name: 
+    * pub_date: 
+    * end_date:
+    * survey_description:
+    * is_active:
+
+### Удаление опроса
+* Request method: POST
+* URL: http://localhost:8000/api/surveys/delete/<int:pk>
+
+### Создание ответа
+* Request method: POST
+* URL: http://localhost:8000/api/answers/create/
+* Body: 
+    * (fk) question:
+    *  answer:
+
+### Редактирование ответа
+* Request method: POST
+* URL: http://localhost:8000/api/answers/update/<int:pk>
+* Body: 
+    * (fk) question:
+    *  answer:
+
+### Удаление ответа
+* Request method: POST
+* URL: http://localhost:8000/api/answers/delete/<int:pk>
+
+### Создание вопроса
+* Request method: POST
+* URL: http://localhost:8000/api/questions/create/
+* Body: 
+    * (fk) survey:
+    *  question_text:
+    *  question_type:
+
+### Редактирование вопроса
+* Request method: POST
+* URL: http://localhost:8000/api/questions/update/<int:pk>
+* Body: 
+    * (fk) survey:
+    *  question_text:
+    *  question_type:
+
+### Удаление вопроса
+* Request method: POST
+* URL: http://localhost:8000/api/questions/delete/<int:pk>
+
+### Создание факта голосования
+* Request method: POST
+* URL: http://localhost:8000/api/questions/create/
+* Body: 
+    * (fk) author:
+    * (fk) survey:
+    * (fk) question:
+    * (fk) answer:
+    * create_date:
+
+### Редактирование факта голосования
+* Request method: POST
+* URL: http://localhost:8000/api/questions/update/<int:pk>
+* Body: 
+    * (fk) author:
+    * (fk) survey:
+    * (fk) question:
+    * (fk) answer:
+    * create_date:
+
+### Удаление факта голосования
+* Request method: POST
+* URL: http://localhost:8000/api/questions/delete/<int:pk>
 
