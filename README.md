@@ -50,6 +50,10 @@ python manage.py runserver
 (автодокументирование на swagger по адресу http://127.0.0.1:8000/swagger/ )
 
 ### Документация
+
+### Admin панель
+* URL: http://localhost:8000/admin/
+
 ### Получение токена пользователя
 * Request method: POST
 * URL: http://localhost:8000/api/auth/token
