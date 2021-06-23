@@ -10,7 +10,6 @@ urlpatterns = [
     path('surveys/delete/<int:pk>', SurveyDeleteView.as_view()),
     path('surveys/create/', SurveyCreateView.as_view()),
     path('surveys/update/<int:pk>', SurveyUpdateView.as_view()),
-    path('votefacts/getAll', VoteFactListView.as_view()),
 
     path('questions/delete/<int:pk>', QuestionDeleteView.as_view()),
     path('questions/create/', QuestionCreateView.as_view()),
@@ -18,6 +17,11 @@ urlpatterns = [
 
     path('answers/delete/<int:pk>', AnswerDeleteView.as_view()),
     path('answers/create/', AnswerCreateView.as_view()),
-    path('answers/update/<int:pk>', AnswerUpdateView.as_view())
+    path('answers/update/<int:pk>', AnswerUpdateView.as_view()),
+
+    path('votefacts/delete/<int:pk>', VoteFactDeleteView.as_view()),
+    path('votefacts/create/', VoteFactCreateView.as_view()),
+    path('votefacts/update/<int:pk>', VoteFactUpdateView.as_view()),
+    path('votefacts/getAll', VoteFactListView.as_view()),
 
 ]
