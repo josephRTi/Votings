@@ -96,3 +96,18 @@ class VoteFactListView(generics.ListAPIView):
             queryset = queryset.filter(votefact__author_id=user_id)
 
         return queryset
+
+
+class VoteFactCreateView(generics.CreateAPIView):
+    serializer_class = VoteFactSerializer
+    queryset = VoteFact.objects.all()
+
+
+class VoteFactUpdateView(generics.UpdateAPIView):
+    serializer_class = VoteFactSerializer
+    queryset = VoteFact.objects.all()
+
+
+class VoteFactDeleteView(generics.DestroyAPIView):
+    serializer_class = VoteFactSerializer
+    queryset = VoteFact.objects.all()
